@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block search %}
+<form class="form-inline justify-content-center" method="POST">
+  <div class="form-group mx-sm-3 mb-2">
+    <input name="city" type="city" class="form-control" placeholder="Enter city" >
+  </div>
+  <button type="submit" class="btn btn-outline-warning mb-2">Search</button>
+
+</form>
+                {% if request.method != 'POST' %}
+
+                    {% elif r['cod'] != 200 %}
+                <div class="weather">
+                    <div id="errorresult">
+                        <h6>{{ weather }}</h6>
+                    </div>
+                </div>
+                    {% elif city == '' %}
+
+
+
+                    {% else %}
+                <div class="weather">
+                    <div>
+                        <h2>{{ weather.city }}</h2>
+                        <p id="temperature">{{ weather.temperature }} {{ weather.unit }}</p>
+                        <p id="description">{{ weather.description }}</p>
+                    </div>
+                </div>
+
+                {% endif %}
+
+
+
+{% endblock %}

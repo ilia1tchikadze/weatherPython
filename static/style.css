@@ -1,0 +1,34 @@
+.form-inline {
+  margin-top: 100px;
+
+}
+
+
+.weather {
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #f4f4f4;
+  border-radius: 3px;
+  display: flex;
+  margin: 0 auto;
+  padding:1em;
+  max-width: 768px;
+
+  align-items: center; }
+
+.weather div {
+  flex-grow: 1; }
+
+h2 {
+  text-transform: capitalize; }
+
+h2, p {
+  margin: 0; }
+
+#errorresult {
+  text-align: center;
+}
+
+
+
+
